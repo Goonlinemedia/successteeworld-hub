@@ -4,11 +4,8 @@ import {
   Link,
   createRootRouteWithContext,
   useRouter,
-  HeadContent,
-  Scripts,
 } from "@tanstack/react-router";
 
-import appCss from "../styles.css?url";
 import { Navbar } from "@/components/site/Navbar";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppButton } from "@/components/site/WhatsAppButton";
@@ -71,49 +68,10 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 }
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
-  head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "SuccessteeWorld Mobile & Autos — Phones, Accessories & Cars in Nigeria" },
-      { name: "description", content: "Your trusted plug for brand new phones, UK used, Naija used, accessories and cars. Verified seller. Nationwide delivery." },
-      { name: "author", content: "SuccessteeWorld" },
-      { property: "og:title", content: "SuccessteeWorld Mobile & Autos — Phones, Accessories & Cars in Nigeria" },
-      { property: "og:description", content: "Your trusted plug for brand new phones, UK used, Naija used, accessories and cars. Verified seller. Nationwide delivery." },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "SuccessteeWorld Mobile & Autos — Phones, Accessories & Cars in Nigeria" },
-      { name: "twitter:description", content: "Your trusted plug for brand new phones, UK used, Naija used, accessories and cars. Verified seller. Nationwide delivery." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/eb58a826-3930-4482-881e-f9d641b81b6f/id-preview-5f4832da--a024112e-ee3b-42b1-a9b3-135fabd0380f.lovable.app-1778361513586.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/eb58a826-3930-4482-881e-f9d641b81b6f/id-preview-5f4832da--a024112e-ee3b-42b1-a9b3-135fabd0380f.lovable.app-1778361513586.png" },
-    ],
-    links: [
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
-    ],
-  }),
-  shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
   errorComponent: ErrorComponent,
 });
-
-function RootShell({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en">
-      <head>
-        <HeadContent />
-      </head>
-      <body>
-        {children}
-        <Scripts />
-      </body>
-    </html>
-  );
-}
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();

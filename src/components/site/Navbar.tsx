@@ -6,7 +6,7 @@ import logo from "@/assets/logo.png";
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const [dark, setDark] = useState(true);
+  const [dark, setDark] = useState(false); // default: light
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -15,7 +15,7 @@ export function Navbar() {
   }, []);
 
   useEffect(() => {
-    document.documentElement.classList.toggle("light", !dark);
+    document.documentElement.classList.toggle("dark", dark);
   }, [dark]);
 
   const links = [
@@ -29,17 +29,13 @@ export function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? "glass border-b border-border/50" : "bg-transparent"
+        scrolled ? "glass border-b border-border/50 shadow-sm" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-5 lg:px-8 flex items-center justify-between h-16 lg:h-20">
         <Link to="/" className="flex items-center gap-3 group">
-          <div className="h-10 lg:h-12 rounded-lg bg-white p-1 flex items-center shadow-sm">
-            <img src={logo} alt="Success T-World logo" className="h-full w-auto object-contain" />
-          </div>
-          <div className="hidden md:block leading-tight">
-            <div className="font-display font-bold text-sm tracking-tight">Success <span className="text-gold">T-World</span></div>
-            <div className="text-[9px] uppercase tracking-[0.2em] text-muted-foreground">Gadgets • Mobile • Autos</div>
+          <div className="h-12 lg:h-14 rounded-xl bg-white p-1 flex items-center shadow-sm border border-border/20">
+            <img src={logo} alt="SuccessteeWorld Mobile & Autos logo" className="h-full w-auto object-contain" />
           </div>
         </Link>
 
