@@ -13,8 +13,8 @@ import { CarCard } from "@/components/site/CarCard";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "SuccessteeWorld — Phones, Accessories & Cars in Nigeria" },
-      { name: "description", content: "Shop brand new phones, UK used, Naija used, accessories and luxury cars. Trusted plug. Nationwide delivery." },
+      { title: "Success T-World — Own Your Gadget | Phones, Accessories & Cars" },
+      { name: "description", content: "We Buy. We Sell. We Swap. Brand new phones, UK used, Naija used, accessories and luxury cars. Ikotun Market, Lagos. Nationwide delivery." },
     ],
   }),
   component: Home,
@@ -42,11 +42,11 @@ function Home() {
         <div className="container mx-auto px-5 lg:px-8 relative z-10 pt-24 pb-16">
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gold/30 bg-gold/5 text-gold text-xs uppercase tracking-[0.2em] mb-6 animate-fade-up">
-              <Sparkles className="w-3.5 h-3.5" /> Verified Nigerian Plug
+              <Sparkles className="w-3.5 h-3.5" /> We Buy • We Sell • We Swap
             </div>
             <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold leading-[0.95] animate-fade-up delay-100">
-              Your Trusted Plug for{" "}
-              <span className="text-gradient-gold">Phones, Accessories</span> & Cars
+              Own Your <span className="text-gradient-gold">Gadget</span>.
+              <br />Drive Your <span className="text-gradient-gold">Dream</span>.
             </h1>
             <p className="mt-6 text-lg text-muted-foreground max-w-xl animate-fade-up delay-200">
               Hand-picked brand new and pre-owned devices. Inspected luxury cars. Delivered nationwide with warranty and white-glove service.

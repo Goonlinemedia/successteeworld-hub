@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, Search, ShoppingBag, Heart, X, Sun, Moon } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -32,13 +33,13 @@ export function Navbar() {
       }`}
     >
       <div className="container mx-auto px-5 lg:px-8 flex items-center justify-between h-16 lg:h-20">
-        <Link to="/" className="flex items-center gap-2 group">
-          <div className="w-9 h-9 rounded-lg bg-gradient-gold flex items-center justify-center font-display font-bold text-gold-foreground text-lg shadow-gold">
-            S
+        <Link to="/" className="flex items-center gap-3 group">
+          <div className="h-10 lg:h-12 rounded-lg bg-white p-1 flex items-center shadow-sm">
+            <img src={logo} alt="Success T-World logo" className="h-full w-auto object-contain" />
           </div>
-          <div className="hidden sm:block leading-none">
-            <div className="font-display font-bold text-base tracking-tight">Successtee<span className="text-gold">World</span></div>
-            <div className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Mobile & Autos</div>
+          <div className="hidden md:block leading-tight">
+            <div className="font-display font-bold text-sm tracking-tight">Success <span className="text-gold">T-World</span></div>
+            <div className="text-[9px] uppercase tracking-[0.2em] text-muted-foreground">Gadgets • Mobile • Autos</div>
           </div>
         </Link>
 
