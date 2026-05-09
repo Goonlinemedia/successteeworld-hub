@@ -1,9 +1,10 @@
 import { MessageCircle } from "lucide-react";
+import { BRAND } from "@/lib/brand";
 
 export function WhatsAppButton() {
   return (
     <a
-      href="https://wa.me/2348000000000?text=Hello%20SuccessteeWorld!"
+      href={`https://wa.me/${BRAND.whatsapp}?text=Hello%20Success%20T-World!`}
       target="_blank"
       rel="noreferrer"
       className="fixed bottom-6 right-6 z-40 group flex items-center gap-3 bg-[#25D366] text-white px-4 py-3.5 rounded-full shadow-luxe hover:shadow-gold transition-all hover:scale-105"
