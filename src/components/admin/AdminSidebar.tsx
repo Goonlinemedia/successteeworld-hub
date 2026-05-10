@@ -5,6 +5,7 @@ import {
   Home,
   LogOut,
   ChevronRight,
+  ShoppingCart,
 } from "lucide-react";
 import {
   Sidebar,
@@ -35,6 +36,11 @@ const items = [
     title: "Categories",
     url: "/admin/categories",
     icon: Tags,
+  },
+  {
+    title: "Sales",
+    url: "/admin/sales",
+    icon: ShoppingCart,
   },
 ];
 

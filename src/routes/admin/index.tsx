@@ -1,4 +1,4 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute, useNavigate } from '@tanstack/react-router'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Package, Tags, ShoppingCart, TrendingUp } from 'lucide-react'
 
@@ -7,6 +7,7 @@ export const Route = createFileRoute('/admin/')({
 })
 
 function AdminDashboard() {
+  const navigate = useNavigate()
   const stats = [
     { title: 'Total Products', value: '128', icon: Package, color: 'text-blue-500' },
     { title: 'Categories', value: '12', icon: Tags, color: 'text-purple-500' },
@@ -65,6 +66,12 @@ function AdminDashboard() {
             </button>
             <button className="w-full justify-start text-sm font-medium border rounded-md p-2 hover:bg-accent">
               Update Site Settings
+            </button>
+            <button 
+              onClick={() => navigate({ to: '/admin/sales' })}
+              className="w-full justify-start text-sm font-medium border rounded-md p-2 hover:bg-accent"
+            >
+              View Sales & Orders
             </button>
           </CardContent>
         </Card>
