@@ -33,6 +33,8 @@ export type ProductData = {
   image: string;
   badge?: string;
   inStock: boolean;
+  brand?: string;
+  sku?: string;
 };
 
 interface ProductFormProps {
@@ -56,6 +58,8 @@ export function ProductForm({ initialData, onSuccess, onCancel }: ProductFormPro
     image: initialData?.image || "",
     badge: initialData?.badge || "",
     inStock: initialData?.inStock ?? true,
+    brand: initialData?.brand || "",
+    sku: initialData?.sku || "",
   });
 
   useEffect(() => {
@@ -133,6 +137,27 @@ export function ProductForm({ initialData, onSuccess, onCancel }: ProductFormPro
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
             />
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <div className="grid gap-2">
+              <Label htmlFor="brand">Brand</Label>
+              <Input
+                id="brand"
+                placeholder="e.g. Apple, Toyota"
+                value={formData.brand}
+                onChange={(e) => setFormData({ ...formData, brand: e.target.value })}
+              />
+            </div>
+            <div className="grid gap-2">
+              <Label htmlFor="sku">SKU</Label>
+              <Input
+                id="sku"
+                placeholder="e.g. IP15-256-BLK"
+                value={formData.sku}
+                onChange={(e) => setFormData({ ...formData, sku: e.target.value })}
+              />
+            </div>
           </div>
 
           <div className="grid grid-cols-2 gap-4">
