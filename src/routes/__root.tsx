@@ -75,15 +75,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const router = useRouter();
+  const pathname = router.state.location.pathname;
+  const isAdmin = pathname.startsWith("/admin");
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Navbar />
-      <main className="pt-16 lg:pt-20">
+      {!isAdmin && <Navbar />}
+      <main className={isAdmin ? "" : "pt-16 lg:pt-20"}>
         <Outlet />
       </main>
-      <Footer />
-      <WhatsAppButton />
+      {!isAdmin && <Footer />}
+      {!isAdmin && <WhatsAppButton />}
     </QueryClientProvider>
   );
 }
