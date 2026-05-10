@@ -32,11 +32,11 @@ function Home() {
   return (
     <div>
       {/* HERO */}
-      <section className="relative -mt-16 lg:-mt-20 min-h-[100svh] flex items-center bg-gradient-hero overflow-hidden">
+      <section className="relative -mt-16 lg:-mt-20 min-h-[92svh] flex items-center bg-gradient-hero overflow-hidden">
         <div className="absolute inset-0">
-          <img src={hero} alt="Premium phones and luxury cars" className="w-full h-full object-cover opacity-60" />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/30" />
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent" />
+          <img src={hero} alt="Premium phones and luxury cars" className="w-full h-full object-cover opacity-25" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/85 to-background/60" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-transparent" />
         </div>
 
         <div className="container mx-auto px-5 lg:px-8 relative z-10 pt-24 pb-16">
@@ -102,11 +102,11 @@ function Home() {
               }`}
             >
               <img src={c.img} alt={c.title} loading="lazy" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
-              <div className="absolute inset-0 p-5 flex flex-col justify-end">
+              <div className="absolute inset-0 bg-gradient-to-t from-foreground/85 via-foreground/30 to-transparent" />
+              <div className="absolute inset-0 p-5 flex flex-col justify-end text-background">
                 <p className="text-[10px] uppercase tracking-[0.2em] text-gold mb-1">{c.desc}</p>
                 <h3 className="font-display text-xl lg:text-2xl mb-2">{c.title}</h3>
-                <span className="inline-flex items-center gap-1.5 text-xs text-foreground/80 group-hover:text-gold transition-colors">
+                <span className="inline-flex items-center gap-1.5 text-xs text-background/90 group-hover:text-gold transition-colors">
                   Shop now <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                 </span>
               </div>
