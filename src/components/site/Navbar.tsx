@@ -34,9 +34,7 @@ export function Navbar() {
     >
       <div className="container mx-auto px-5 lg:px-8 flex items-center justify-between h-16 lg:h-20">
         <Link to="/" className="flex items-center gap-3 group">
-          <div className="h-12 lg:h-14 rounded-xl bg-white p-1 flex items-center shadow-sm border border-border/20">
-            <img src={logo} alt="SuccessteeWorld Mobile & Autos logo" className="h-full w-auto object-contain" />
-          </div>
+          <img src={logo} alt="SuccessteeWorld Mobile & Autos logo" className="h-12 lg:h-14 w-auto object-contain" />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-1">

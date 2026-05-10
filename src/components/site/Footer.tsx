@@ -8,9 +8,7 @@ export function Footer() {
     <footer className="border-t border-border/60 bg-card/40 mt-24">
       <div className="container mx-auto px-5 lg:px-8 py-16 grid gap-12 lg:grid-cols-4">
         <div className="lg:col-span-1">
-          <div className="bg-white rounded-xl p-2 inline-block mb-4">
-            <img src={logo} alt={BRAND.name} className="h-12 w-auto object-contain" />
-          </div>
+          <img src={logo} alt={BRAND.name} className="h-14 w-auto object-contain mb-4" />
           <p className="text-xs text-muted-foreground mb-2">{BRAND.fullName}</p>
           <p className="text-[10px] tracking-widest text-gold uppercase mb-4">{BRAND.rc}</p>
           <p className="text-sm text-muted-foreground leading-relaxed">
