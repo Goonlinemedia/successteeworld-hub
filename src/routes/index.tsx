@@ -33,10 +33,15 @@ function Home() {
     <div>
       {/* HERO */}
       <section className="relative -mt-16 lg:-mt-20 min-h-[92svh] flex items-center bg-gradient-hero overflow-hidden">
-        <div className="absolute inset-0">
-          <img src={hero} alt="iPhone 17 Pro Max and luxury car" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-background/10" />
-          <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-background/20" />
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute inset-0 animate-hero-bounce">
+            <img src={hero} alt="iPhone 17 Pro Max and luxury car" className="w-full h-full object-cover animate-hero-drive will-change-transform" />
+          </div>
+          {/* Shine sweep */}
+          <div className="pointer-events-none absolute inset-y-0 -left-1/3 w-1/3 bg-gradient-to-r from-transparent via-white/35 to-transparent animate-shine" />
+          {/* Readability overlays */}
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/75 to-background/5" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background/65 via-transparent to-background/20" />
         </div>
 
         <div className="container mx-auto px-5 lg:px-8 relative z-10 pt-24 pb-16">
