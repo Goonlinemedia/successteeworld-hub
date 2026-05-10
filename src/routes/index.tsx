@@ -34,9 +34,9 @@ function Home() {
       {/* HERO */}
       <section className="relative -mt-16 lg:-mt-20 min-h-[92svh] flex items-center bg-gradient-hero overflow-hidden">
         <div className="absolute inset-0">
-          <img src={hero} alt="Premium phones and luxury cars" className="w-full h-full object-cover opacity-25" />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/85 to-background/60" />
-          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-transparent" />
+          <img src={hero} alt="iPhone 17 Pro Max and luxury car" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-background/10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-background/20" />
         </div>
 
         <div className="container mx-auto px-5 lg:px-8 relative z-10 pt-24 pb-16">
