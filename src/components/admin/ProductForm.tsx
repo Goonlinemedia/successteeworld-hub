@@ -50,6 +50,15 @@ export function ProductForm({ initialData, onSuccess, onCancel }: ProductFormPro
   const [imagePreview, setImagePreview] = useState<string | null>(initialData?.image || null);
   const [imageFile, setImageFile] = useState<File | null>(null);
 
+  const generateSKU = () => {
+    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    let result = "STW-";
+    for (let i = 0; i < 8; i++) {
+      result += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    return result;
+  };
+
   const [formData, setFormData] = useState<ProductData>({
     name: initialData?.name || "",
     category: initialData?.category || "",
@@ -59,7 +68,7 @@ export function ProductForm({ initialData, onSuccess, onCancel }: ProductFormPro
     badge: initialData?.badge || "",
     inStock: initialData?.inStock ?? true,
     brand: initialData?.brand || "",
-    sku: initialData?.sku || "",
+    sku: initialData?.sku || generateSKU(),
   });
 
   useEffect(() => {
