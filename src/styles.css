@@ -158,9 +158,31 @@
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
   }
+  @keyframes hero-drive {
+    0%   { transform: translate3d(0,0,0) scale(1.05); }
+    25%  { transform: translate3d(-12px,-6px,0) scale(1.07); }
+    50%  { transform: translate3d(8px,-10px,0) scale(1.06); }
+    75%  { transform: translate3d(14px,-4px,0) scale(1.08); }
+    100% { transform: translate3d(0,0,0) scale(1.05); }
+  }
+  @keyframes hero-bounce {
+    0%, 100% { transform: translateY(0); }
+    20%      { transform: translateY(-8px); }
+    40%      { transform: translateY(0); }
+    60%      { transform: translateY(-4px); }
+    80%      { transform: translateY(0); }
+  }
+  @keyframes shine-sweep {
+    0%   { transform: translateX(-120%) skewX(-18deg); opacity: 0; }
+    40%  { opacity: 0.55; }
+    100% { transform: translateX(220%) skewX(-18deg); opacity: 0; }
+  }
   .animate-fade-up { animation: fade-up 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
   .animate-fade-in { animation: fade-in 0.6s ease-out both; }
   .animate-float { animation: float 6s ease-in-out infinite; }
+  .animate-hero-drive { animation: hero-drive 14s ease-in-out infinite; }
+  .animate-hero-bounce { animation: hero-bounce 3.2s ease-in-out infinite; }
+  .animate-shine { animation: shine-sweep 5s ease-in-out infinite; }
   .delay-100 { animation-delay: 0.1s; }
   .delay-200 { animation-delay: 0.2s; }
   .delay-300 { animation-delay: 0.3s; }
