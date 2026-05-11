@@ -195,20 +195,25 @@
   .animate-hero-bounce { animation: hero-bounce 3.2s ease-in-out infinite; }
   .animate-shine { animation: shine-sweep 5s ease-in-out infinite; }
   .animate-headlight { animation: headlight-flicker 5.5s ease-in-out infinite; }
-  .headlight-bulb {
+  @keyframes headlight-blink {
+    0%, 38%   { opacity: 0; }                   /* light ON (mask transparent) */
+    40%       { opacity: 0.95; }                /* OFF */
+    44%       { opacity: 0; }                   /* ON */
+    47%       { opacity: 0.9; }                 /* OFF */
+    50%, 100% { opacity: 0; }                   /* ON */
+  }
+  .animate-headlight-blink { animation: headlight-blink 4s ease-in-out infinite; }
+  .headlight-mask {
     position: absolute;
-    width: 5rem;
-    height: 5rem;
-    border-radius: 9999px;
     pointer-events: none;
-    mix-blend-mode: screen;
-    background: radial-gradient(circle at center,
-      rgba(255, 255, 255, 1) 0%,
-      rgba(220, 235, 255, 0.95) 12%,
-      rgba(160, 200, 255, 0.55) 30%,
-      rgba(120, 170, 255, 0.2) 55%,
-      transparent 78%);
-    filter: blur(2px);
+    border-radius: 9999px;
+    /* Match the dark bronze/graphite of the car body to hide the bright headlight */
+    background: radial-gradient(ellipse at center,
+      rgba(38, 24, 14, 0.98) 0%,
+      rgba(38, 24, 14, 0.95) 45%,
+      rgba(38, 24, 14, 0.6) 75%,
+      transparent 100%);
+    filter: blur(6px);
   }
   .delay-100 { animation-delay: 0.1s; }
   .delay-200 { animation-delay: 0.2s; }
