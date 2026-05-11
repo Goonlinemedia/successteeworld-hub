@@ -38,8 +38,8 @@ function Home() {
             <img src={hero} alt="iPhone 17 Pro Max and luxury car" className="w-full h-full object-cover animate-hero-drive will-change-transform" />
           </div>
           {/* Headlight turning on — front of car (right side) */}
-          <div className="headlight-bulb animate-headlight" style={{ right: "4%", bottom: "46%", width: "7rem", height: "3rem" }} />
-          <div className="headlight-bulb animate-headlight" style={{ right: "3%", bottom: "44%", width: "4rem", height: "4rem", animationDelay: "0.08s" }} />
+          <div className="headlight-bulb animate-headlight" style={{ right: "5%", bottom: "40%", width: "9rem", height: "2.5rem" }} />
+          <div className="headlight-bulb animate-headlight" style={{ right: "4%", bottom: "39%", width: "4.5rem", height: "4.5rem", animationDelay: "0.06s" }} />
           {/* Shine sweep */}
           <div className="pointer-events-none absolute inset-y-0 -left-1/3 w-1/3 bg-gradient-to-r from-transparent via-white/35 to-transparent animate-shine" />
           {/* Readability overlays */}
