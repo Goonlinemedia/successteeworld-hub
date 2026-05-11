@@ -37,9 +37,9 @@ function Home() {
           <div className="absolute inset-0 animate-hero-bounce">
             <img src={hero} alt="iPhone 17 Pro Max and luxury car" className="w-full h-full object-cover animate-hero-drive will-change-transform" />
           </div>
-          {/* Headlights turning on */}
-          <div className="headlight-beam animate-headlight" style={{ right: "22%", bottom: "12%", transform: "translate(50%, 50%)" }} />
-          <div className="headlight-beam animate-headlight" style={{ right: "10%", bottom: "14%", transform: "translate(50%, 50%)", animationDelay: "0.15s" }} />
+          {/* Headlight turning on — front of car (right side, facing right) */}
+          <div className="headlight-glow animate-headlight" style={{ right: "4%", bottom: "26%" }} />
+          <div className="headlight-cone animate-headlight" style={{ right: "-18%", bottom: "20%", animationDelay: "0.05s" }} />
           {/* Shine sweep */}
           <div className="pointer-events-none absolute inset-y-0 -left-1/3 w-1/3 bg-gradient-to-r from-transparent via-white/35 to-transparent animate-shine" />
           {/* Readability overlays */}

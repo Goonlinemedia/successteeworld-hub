@@ -194,21 +194,34 @@
   .animate-hero-drive { animation: hero-drive 14s ease-in-out infinite; }
   .animate-hero-bounce { animation: hero-bounce 3.2s ease-in-out infinite; }
   .animate-shine { animation: shine-sweep 5s ease-in-out infinite; }
-  .animate-headlight { animation: headlight-flicker 5.5s ease-in-out infinite; transform-origin: center; }
-  .headlight-beam {
+  .animate-headlight { animation: headlight-flicker 5.5s ease-in-out infinite; }
+  .headlight-glow {
     position: absolute;
-    width: 22rem;
-    height: 22rem;
+    width: 10rem;
+    height: 10rem;
     border-radius: 9999px;
     pointer-events: none;
     mix-blend-mode: screen;
     background: radial-gradient(circle at center,
-      rgba(255, 246, 200, 0.95) 0%,
-      rgba(255, 230, 140, 0.55) 18%,
-      rgba(255, 210, 90, 0.25) 38%,
-      rgba(255, 200, 60, 0.08) 60%,
+      rgba(255, 252, 220, 1) 0%,
+      rgba(255, 235, 150, 0.8) 15%,
+      rgba(255, 210, 90, 0.35) 35%,
+      rgba(255, 200, 60, 0.1) 60%,
+      transparent 78%);
+    filter: blur(4px);
+  }
+  .headlight-cone {
+    position: absolute;
+    width: 38rem;
+    height: 16rem;
+    pointer-events: none;
+    mix-blend-mode: screen;
+    background: radial-gradient(ellipse at left center,
+      rgba(255, 246, 200, 0.9) 0%,
+      rgba(255, 225, 130, 0.45) 20%,
+      rgba(255, 210, 90, 0.18) 45%,
       transparent 75%);
-    filter: blur(6px);
+    filter: blur(10px);
   }
   .delay-100 { animation-delay: 0.1s; }
   .delay-200 { animation-delay: 0.2s; }
