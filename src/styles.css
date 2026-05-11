@@ -177,6 +177,16 @@
     40%  { opacity: 0.55; }
     100% { transform: translateX(220%) skewX(-18deg); opacity: 0; }
   }
+  @keyframes headlight-flicker {
+    0%, 18%   { opacity: 0; filter: blur(8px); }
+    20%       { opacity: 0.85; }
+    22%       { opacity: 0.1; }
+    25%       { opacity: 0.9; }
+    27%       { opacity: 0.2; }
+    30%, 80%  { opacity: 1; filter: blur(4px); }
+    85%       { opacity: 0.4; }
+    90%, 100% { opacity: 0; filter: blur(10px); }
+  }
 
   .animate-fade-up { animation: fade-up 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
   .animate-fade-in { animation: fade-in 0.6s ease-out both; }
@@ -184,6 +194,22 @@
   .animate-hero-drive { animation: hero-drive 14s ease-in-out infinite; }
   .animate-hero-bounce { animation: hero-bounce 3.2s ease-in-out infinite; }
   .animate-shine { animation: shine-sweep 5s ease-in-out infinite; }
+  .animate-headlight { animation: headlight-flicker 5.5s ease-in-out infinite; transform-origin: center; }
+  .headlight-beam {
+    position: absolute;
+    width: 22rem;
+    height: 22rem;
+    border-radius: 9999px;
+    pointer-events: none;
+    mix-blend-mode: screen;
+    background: radial-gradient(circle at center,
+      rgba(255, 246, 200, 0.95) 0%,
+      rgba(255, 230, 140, 0.55) 18%,
+      rgba(255, 210, 90, 0.25) 38%,
+      rgba(255, 200, 60, 0.08) 60%,
+      transparent 75%);
+    filter: blur(6px);
+  }
   .delay-100 { animation-delay: 0.1s; }
   .delay-200 { animation-delay: 0.2s; }
   .delay-300 { animation-delay: 0.3s; }
